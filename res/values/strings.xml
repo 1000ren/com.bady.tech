@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">一一识字</string>
+    <string name="app_version">1.2.5</string>
+    <string name="action_settings">进入设置</string>
+    <string name="action_weather">天气预报</string>
+    <string name="action_share">分享给好友</string>
+    <string name="action_recommend">精品推荐</string>
+    <string name="action_games">精品游戏</string>
+    <string name="action_update">检查新版本</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login_main">开始体验</string>
+    <string name="about_info">\t\t\t\t一一识字，本软件专注于一至六周岁儿童识字，通过简单有效的方式，易教易学，快速帮助学龄前儿童掌握一千二百个汉字的应用软件。同时帮助学龄前儿童学习简单的儿歌，名诗名词。儿歌及诗词多选用朗朗上口简单易学的经典词句。</string>
+    <string name="info_one">1、卡片形式；</string>
+    <string name="info_two">2、简单儿歌；</string>
+    <string name="info_three">3、经典诗词；</string>
+    <string name="info_four">4、优美图片；</string>
+    <string name="info_five">更多内容持续更新中……</string>
+    <string name="title_activity_blank">BlankActivity</string>
+    <string name="share_content">http://192.168.1.104:8080/apk/com.baby.tech.apk</string>
+    <string name="title_activity_update">UpdateActivity</string>
+    <!-- 功能项目 标题 -->
+    <string name="title_one">识字</string>
+    <string name="title_two">推荐</string>
+    <string name="title_three">设置</string>
+    
+    
+    
+
+</resources>
