@@ -31,8 +31,8 @@ import android.widget.TextView;
 
 import com.baby.tech.DialogTool;
 import com.baby.tech.R;
-import com.baby.tech.TabActivity;
-import com.baby.tech.WeatherActivity;
+import com.baby.tech.activity.TabActivity;
+import com.baby.tech.activity.WeatherActivity;
 import com.baby.tech.db.DBManager;
 import com.baby.tech.db.TechdbInfo;
 import com.palmcity.tts.NaviTTS;

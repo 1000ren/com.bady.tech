@@ -4,6 +4,9 @@
     <string name="app_name">一一识字</string>
     <string name="app_version">1.2.5</string>
     <string name="action_settings">进入设置</string>
+    <string name="action_mp4">动漫视频</string>
+    <string name="action_mp3">儿童音乐</string>
+    <string name="action_childstory">儿童故事</string>
     <string name="action_weather">天气预报</string>
     <string name="action_share">分享给好友</string>
     <string name="action_recommend">精品推荐</string>
@@ -18,12 +21,17 @@
     <string name="info_four">4、优美图片；</string>
     <string name="info_five">更多内容持续更新中……</string>
     <string name="title_activity_blank">BlankActivity</string>
-    <string name="share_content">http://192.168.1.104:8080/apk/com.baby.tech.apk</string>
+    <string name="share_content">http://172.23.159.116/apk/com.baby.tech.apk</string>
     <string name="title_activity_update">UpdateActivity</string>
+    <string name="my_ip">http://192.168.1.104</string>
+    <string name="my_loc_ip">http://172.23.159.116</string>
+    
+    
     <!-- 功能项目 标题 -->
     <string name="title_one">识字</string>
-    <string name="title_two">推荐</string>
-    <string name="title_three">设置</string>
+    <string name="title_two">学习空间</string>
+    <string name="title_three">推荐</string>
+    <string name="title_four">更多</string>
     
     
     

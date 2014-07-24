@@ -1,10 +1,12 @@
-package com.baby.tech;
+package com.baby.tech.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.baby.tech.R;
 
 public class BlankActivity extends Activity {
 

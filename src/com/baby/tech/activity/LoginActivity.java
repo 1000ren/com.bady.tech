@@ -1,10 +1,12 @@
-package com.baby.tech;
+package com.baby.tech.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+
+import com.baby.tech.R;
 
 /**
  * Activity which displays a login screen to the user, offering registration as

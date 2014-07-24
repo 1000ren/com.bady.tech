@@ -1,4 +1,4 @@
-package com.baby.tech;
+package com.baby.tech.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import com.baby.tech.R;
 
 public class WeatherActivity extends Activity {
 

@@ -1,9 +1,8 @@
-package com.baby.tech;
+package com.baby.tech.activity;
 
 import java.util.ArrayList;
 
 import net.youmi.android.spot.SpotManager;
-
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -20,9 +19,12 @@ import android.support.v4.view.ViewPager;
 import android.view.ActionMode;
 import android.view.KeyEvent;
 
+import com.baby.tech.DialogTool;
+import com.baby.tech.R;
+import com.baby.tech.fragment.TabFour;
 import com.baby.tech.fragment.TabOne;
-import com.baby.tech.fragment.TabTwo;
 import com.baby.tech.fragment.TabThree;
+import com.baby.tech.fragment.TabTwo;
 
 @SuppressLint("NewApi")
 public class TabActivity extends Activity {
@@ -53,8 +55,10 @@ public class TabActivity extends Activity {
 		mTabsAdapter.addTab(bar.newTab().setText(R.string.title_one), TabOne.class,
 				null);
 		mTabsAdapter.addTab(bar.newTab().setText(R.string.title_two), TabTwo.class,
-				null);
+		        null);
 		mTabsAdapter.addTab(bar.newTab().setText(R.string.title_three), TabThree.class,
+				null);
+		mTabsAdapter.addTab(bar.newTab().setText(R.string.title_four), TabFour.class,
 				null);
 		bar.setSelectedNavigationItem(PreferenceManager
 				.getDefaultSharedPreferences(this).getInt(INSTANCESTATE_TAB, 0));
@@ -204,4 +208,25 @@ public class TabActivity extends Activity {
      }
 	}
 
+ @Override
+ public boolean onKeyDown(int keyCode, KeyEvent event) {
+  if (event.getKeyCode() == KeyEvent.KEYCODE_BACK
+          && event.getAction() == KeyEvent.ACTION_DOWN) {
+         android.content.DialogInterface.OnClickListener positiveBtnListener = new DialogInterface.OnClickListener() {
+          public void onClick(DialogInterface dialog, int which) {
+           if (which == -1) {
+            // startActivity(new Intent(CarTabActivity.this,
+            // BaseRegisterActivity.class));
+            finish();
+           }
+          }
+         };
+         DialogTool.createConfirmDialog(this, "提示", "确定退出程序？", "退出", "再玩玩",
+           positiveBtnListener, positiveBtnListener, R.drawable.icon)
+           .show();
+         return true;
+        }
+        return false;
+       }  
+	
 }

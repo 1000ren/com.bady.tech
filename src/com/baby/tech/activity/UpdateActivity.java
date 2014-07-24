@@ -1,10 +1,12 @@
-package com.baby.tech;
+package com.baby.tech.activity;
 
 import net.youmi.android.AdManager;
 import net.youmi.android.dev.AppUpdateInfo;
 import net.youmi.android.dev.CheckAppUpdateCallBack;
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.baby.tech.R;
 
 public class UpdateActivity extends Activity implements CheckAppUpdateCallBack {
 

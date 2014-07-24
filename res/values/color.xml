@@ -21,4 +21,20 @@
     <color name="orange">#FFA500</color>
     <color name="orange_dark">#FF8C00</color>
     
+    
+    
+    <color name="color_text_white">#FFFFFF</color>
+    <color name="color_text_fastnavi">#808080</color>
+    <color name="color_text_speed">#FFFF00</color>
+    <color name="color_text_black">#000000</color>
+    <color name="color_text_blue">#0000FF</color>
+    <color name="color_text_blue_ex">#0080FF</color>
+    
+    <color name="color_a3a3a3">#a3a3a3</color>
+    <color name="tab_item_text_color">#FFB3B3B3</color>
+    <color name="tab_item_text_color_press">#FF29ABE2</color>
+    
+    <drawable name="white">#FFFFFF</drawable>
+    <drawable name="gray">#8d8d8d</drawable>
+    
 </resources>

@@ -1,4 +1,4 @@
-package com.baby.tech;
+package com.baby.tech.activity;
 
 import java.util.ArrayList;
 
@@ -28,6 +28,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.baby.tech.DialogTool;
+import com.baby.tech.R;
 import com.baby.tech.db.DBManager;
 import com.baby.tech.db.TechdbInfo;
 import com.palmcity.tts.NaviTTS;
