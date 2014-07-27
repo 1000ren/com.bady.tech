@@ -1,6 +1,5 @@
 package com.baby.tech.activity;
 
-import android.app.Activity;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnBufferingUpdateListener;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -14,9 +13,10 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.baby.tech.R;
+import com.baby.tech.activity.base.BaseActivity;
 import com.baby.tech.db.Constant;
 
-public class MediaPlayerActivity extends Activity  implements
+public class MediaPlayerActivity extends BaseActivity  implements
 OnBufferingUpdateListener, OnCompletionListener, OnPreparedListener,
 OnVideoSizeChangedListener, SurfaceHolder.Callback{
 
@@ -57,8 +57,8 @@ OnVideoSizeChangedListener, SurfaceHolder.Callback{
              */
             //path = "http://www.androidbook.com/akc/filestorage/android/documentfiles/3389/movie.mp4";
             //path = "http://forum.ea3w.com/coll_ea3w/attach/2008_10/12237832415.3gp";
-        	//path = "http://172.23.159.116/mp4/20000002_7991202.mp4";
-        	path = Constant.HTTP_SERVER_IP+"mp3/81952-2519918.aac";
+        	path = Constant.HTTP_SERVER_IP + "onestudy/mp4/20000002_7991202.mp4";
+        	//path = Constant.HTTP_SERVER_IP+"mp3/81952-2519918.aac";
 
             // Create a new media player and set the listeners
             mMediaPlayer = new MediaPlayer();

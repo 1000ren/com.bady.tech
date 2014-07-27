@@ -21,28 +21,28 @@ import android.view.KeyEvent;
 
 import com.baby.tech.DialogTool;
 import com.baby.tech.R;
+import com.baby.tech.activity.base.BaseActivity;
 import com.baby.tech.fragment.TabFour;
 import com.baby.tech.fragment.TabOne;
 import com.baby.tech.fragment.TabThree;
 import com.baby.tech.fragment.TabTwo;
+import com.palmcity.tts.NaviTTS;
 
 @SuppressLint("NewApi")
-public class TabActivity extends Activity {
+public class TabActivity extends BaseActivity {
 	private static final String INSTANCESTATE_TAB = "tab";
 	private static final int DEFAULT_OFFSCREEN_PAGES = 2;
 	ViewPager mViewPager;
 	TabsAdapter mTabsAdapter;
 	ActionMode mActionMode;
 	private Context mContext ;
-
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
 	 mContext = this ;
 		//===============================
-		
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setOffscreenPageLimit(DEFAULT_OFFSCREEN_PAGES);// Ԥ����ص�ҳ������
 

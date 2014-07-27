@@ -33,6 +33,7 @@ import com.baby.tech.DialogTool;
 import com.baby.tech.R;
 import com.baby.tech.activity.TabActivity;
 import com.baby.tech.activity.WeatherActivity;
+import com.baby.tech.base.MyApplication;
 import com.baby.tech.db.DBManager;
 import com.baby.tech.db.TechdbInfo;
 import com.palmcity.tts.NaviTTS;
@@ -40,13 +41,15 @@ import com.palmcity.tts.NaviTTS;
 
 
 
-@SuppressLint("NewApi")
+@SuppressLint({ "NewApi", "ValidFragment" })
 public class TabOne extends Fragment{
 //=======================================================================
     private TextView mTextShowone = null;
     private TextView mTextWord = null;
     private TextView mTextSentence = null;
     
+    
+    private MyApplication mCommonApplication;
     /** 语音播报 **/
     public NaviTTS tts = null;
 
@@ -79,15 +82,18 @@ public class TabOne extends Fragment{
     
     private Context mContext;
     
-    
+    MyApplication myApplication ;
 //=======================================================================
-	
+    
+
+    
+    
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 	    this.mContext = ((TabActivity) getActivity()).getmContext();
 		View tab1= inflater.inflate(R.layout.tabone, container,false);
-		 
+		myApplication =	(MyApplication) getActivity().getApplication();
 		 
 //======================================================================
 //	 AdManager.getInstance(this.mContext).init("e0e6d19ce2bd64c5",
@@ -112,7 +118,8 @@ public class TabOne extends Fragment{
 	       // mDataNum = mstrAry.length;
 	       mDataNum = mTechdbInfoAry.size();
 
-	       tts = new NaviTTS(this.mContext);
+//	       tts = new NaviTTS(this.mContext);
+	       tts = myApplication.tts ;
 	       findView(tab1);
 	       
 	       
@@ -136,7 +143,10 @@ public class TabOne extends Fragment{
     public void onDestroy() {
 	 // TODO Auto-generated method stub
 	    mDBManager.closeDB();
+	    if(tts!=null){
+//	        tts.stop();
 	    tts.closePlayer();
+	    }
 	    SpotManager.getInstance(this.mContext).unregisterSceenReceiver();
 
 	    super.onDestroy();

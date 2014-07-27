@@ -1,14 +1,14 @@
 package com.baby.tech.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.baby.tech.R;
+import com.baby.tech.activity.base.BaseActivity;
 
-public class BlankActivity extends Activity {
+public class BlankActivity extends BaseActivity  {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

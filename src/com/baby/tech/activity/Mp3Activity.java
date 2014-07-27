@@ -1,6 +1,5 @@
 package com.baby.tech.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.WindowManager;
@@ -10,9 +9,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.baby.tech.R;
+import com.baby.tech.activity.base.BaseActivity;
 import com.baby.tech.db.Constant;
 
-public class Mp3Activity extends Activity {
+public class Mp3Activity extends BaseActivity {
 
 	private WebView webView;
 

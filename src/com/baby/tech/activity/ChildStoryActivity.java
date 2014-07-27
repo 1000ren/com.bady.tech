@@ -1,6 +1,5 @@
 package com.baby.tech.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.WindowManager;
@@ -10,9 +9,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.baby.tech.R;
+import com.baby.tech.activity.base.BaseActivity;
 import com.baby.tech.db.Constant;
 
-public class ChildStoryActivity extends Activity {
+public class ChildStoryActivity extends BaseActivity {
 
 	private WebView webView;
 
@@ -46,7 +46,7 @@ public class ChildStoryActivity extends Activity {
 	public void openBrowser() {
 		// webView.loadUrl("http://192.168.1.104/map/weather.html");
 		// webView.loadUrl("http://www.baidu.com");
-		webView.loadUrl(Constant.HTTP_SERVER_IP+"edu/gushi.htm");
+		webView.loadUrl(Constant.HTTP_SERVER_IP+"onestudy/edu/gushi.htm");
 
 		webView.setWebChromeClient(new WebChromeClient() {
 			@Override

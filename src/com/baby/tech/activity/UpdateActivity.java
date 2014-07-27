@@ -3,12 +3,12 @@ package com.baby.tech.activity;
 import net.youmi.android.AdManager;
 import net.youmi.android.dev.AppUpdateInfo;
 import net.youmi.android.dev.CheckAppUpdateCallBack;
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.baby.tech.R;
+import com.baby.tech.activity.base.BaseActivity;
 
-public class UpdateActivity extends Activity implements CheckAppUpdateCallBack {
+public class UpdateActivity extends BaseActivity implements CheckAppUpdateCallBack {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

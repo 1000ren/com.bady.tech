@@ -178,9 +178,10 @@ public class Constant {
 	
 	public static final int MIN_POS_LEN = 500;//8818; //
 
-	public static final int SERVER_PORT = 8919;//8818; //
+	public static final int SERVER_PORT = 9007;//8818; //
 	
 	public static final String HTTP_SERVER_IP = "http://www.lbs007.net:8087/";
 
-	public static final String SERVER_IP = "192.168.1.101";//"113.10.137.209";//www.i6188.com
+//	public static final String LOCALSERVER_IP = "192.168.1.106";//"113.10.137.209";//www.i6188.com
+	public static final String SERVER_IP = "www.lbs007.net";//"113.10.137.209";//www.i6188.com
 }
