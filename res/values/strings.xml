@@ -26,6 +26,17 @@
     <string name="my_ip">http://192.168.1.104</string>
     <string name="my_loc_ip">http://172.23.159.116</string>
     
+    <!-- 网络请求相关 -->
+     <string name="text_net_not_available">网络处于关闭状态，请连接GPRS或WIFI网络</string>
+    <string name="text_feature_not_supported">未开放该业务功能</string>
+    <string name="text_network_unavailable">网络服务不可用，请检查网络连接</string>
+    <string name="text_network_available">网络服务已恢复</string>
+    <string name="text_net_busy">网络繁忙，请稍等重试</string>
+    <string name="text_net_interrupted">网络异常中断，请检查网络连接</string>
+    <string name="text_net_io_exception">网络传输异常，请稍等重试</string>
+    <string name="text_net_server_exception">服务器异常，请联系客服</string>
+    <string name="text_unknown_error">未知错误</string>
+    <string name="text_success">数据加载成功</string>
     
     <!-- 功能项目 标题 -->
     <string name="title_one">识字</string>
