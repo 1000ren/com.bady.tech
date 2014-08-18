@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baby.tech.R;
 import com.baby.tech.activity.MainActivity;
@@ -53,10 +54,17 @@ public class Fragment04 extends BaseFragment {
   // sharebnt
   RelativeLayout sharebnt = (RelativeLayout) view
           .findViewById(R.id.sharebnt);
-  RelativeLayout mybnt = (RelativeLayout) view.findViewById(R.id.mybbbtn);
+  RelativeLayout updatebtn = (RelativeLayout) view
+          .findViewById(R.id.updatebtn);
+  RelativeLayout aboutbtn = (RelativeLayout) view
+          .findViewById(R.id.aboutbtn);
+  RelativeLayout settingbnt = (RelativeLayout) view
+          .findViewById(R.id.settingbnt);
 
   sharebnt.setOnClickListener(new btn_listen());
-  mybnt.setOnClickListener(new btn_listen());
+  updatebtn.setOnClickListener(new btn_listen());
+  aboutbtn.setOnClickListener(new btn_listen());
+  settingbnt.setOnClickListener(new btn_listen());
   myApplication = (MyApplication) getActivity().getApplication();
 		
 		return view;
@@ -105,10 +113,16 @@ public class Fragment04 extends BaseFragment {
              it.setType("text/plain");
              startActivity(Intent.createChooser(it, "将一一识字分享到"));
              break;
-
-         case R.id.mybbbtn:
-             
-             break;
+         case R.id.updatebtn:
+             //
+             Toast.makeText(context, "版本更新", Toast.LENGTH_SHORT).show();
+             break ;
+         case R.id.aboutbtn:
+             Toast.makeText(context, "关于我们", Toast.LENGTH_SHORT).show();
+             break ;
+         case R.id.settingbnt:
+             Toast.makeText(context, "设置", Toast.LENGTH_SHORT).show();
+             break ;
 
          default:
              break;

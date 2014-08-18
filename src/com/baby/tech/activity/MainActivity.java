@@ -12,9 +12,9 @@ import android.view.KeyEvent;
 import com.baby.tech.DialogTool;
 import com.baby.tech.R;
 import com.baby.tech.fragment.Fragment01;
-import com.baby.tech.fragment.Fragment02;
 import com.baby.tech.fragment.Fragment03;
 import com.baby.tech.fragment.Fragment04;
+import com.baby.tech.fragment.HomeFragment;
 import com.baby.tech.utils.ConstantValues;
 import com.baby.tech.view.MyTabWidget;
 import com.baby.tech.view.MyTabWidget.OnTabSelectedListener;
@@ -32,7 +32,8 @@ public class MainActivity extends FragmentActivity implements
  private static final String TAG = "MainActivity";
 	private MyTabWidget mTabWidget;
 	private Fragment01 mHomeFragment;
-	private Fragment02 mCategoryFragment;
+//	private Fragment02 mCategoryFragment;
+	private HomeFragment mCategoryFragment;
 	private Fragment03 mCollectFragment;
 	private Fragment04 mSettingFragment;
 	private int mIndex = ConstantValues.HOME_FRAGMENT_INDEX;
@@ -79,7 +80,8 @@ public class MainActivity extends FragmentActivity implements
 			break;
 		case ConstantValues.CATEGORY_FRAGMENT_INDEX:
 			if (null == mCategoryFragment) {
-				mCategoryFragment = new Fragment02();
+//				mCategoryFragment = new Fragment02();
+				mCategoryFragment = new HomeFragment();
 				transaction.add(R.id.center_layout, mCategoryFragment);
 			} else {
 				transaction.show(mCategoryFragment);

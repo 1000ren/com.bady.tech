@@ -20,27 +20,28 @@ import android.widget.TextView;
 
 import com.baby.tech.R;
 
-public class ImageAdapter extends BaseAdapter {
+public class AudioMenuAdapter extends BaseAdapter {
     private Context context;
 
-    public ImageAdapter(Context context) {
+    public AudioMenuAdapter(Context context) {
         this.context = context;
     }
 
     private Integer[] images = {
             // 九宫格图片的设置
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
+            R.drawable.classicsong_btn, R.drawable.hotsong_btn,
+            R.drawable.englishsong_btn,
 
-            R.drawable.ic_launcher,
+            R.drawable.babysong_btn, R.drawable.threesong_btn,
+            R.drawable.kindergartensong_btn,
 
     };
 
     private String[] texts = {
             // 九宫格图片下方文字的设置
-            "儿童音乐", "动漫视频", "儿童故事",
+            "经典儿歌", "热门歌曲", "英文儿歌",
 
-             "看图识字", };
+            "胎教歌曲", "三字儿歌", "幼儿园", };
 
     // get the number
     @Override
@@ -68,7 +69,7 @@ public class ImageAdapter extends BaseAdapter {
             LayoutInflater inflater = LayoutInflater.from(context);
             view = inflater.inflate(R.layout.item, null);
             view.setTag(wrapper);
-            view.setPadding(15, 15, 15, 15); // 每格的间距
+            view.setPadding(5, 5, 5, 5); // 每格的间距
         } else {
             wrapper = (ImgTextWrapper) view.getTag();
         }
@@ -83,8 +84,6 @@ public class ImageAdapter extends BaseAdapter {
     }
 }
 
-class ImgTextWrapper {
-    ImageView imageView;
-    TextView textView;
 
-}
+
+

@@ -1,6 +1,5 @@
 package com.baby.tech.activity;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,13 +14,13 @@ import android.widget.TextView;
 
 import com.baby.tech.R;
 import com.baby.tech.activity.base.BaseActivity;
-import com.baby.tech.adapter.ExpandableListViewAdapter;
+import com.baby.tech.adapter.MultiMediaListAdapter;
 import com.baby.tech.db.Constant;
 import com.baby.tech.utils.Player;
 
 public class AudioActivity extends BaseActivity {
     ListView mExpandableListView;
-    ExpandableListViewAdapter mExpandableListViewAdapter;
+    MultiMediaListAdapter mExpandableListViewAdapter;
 
     private TextView mTitleTv;
     
@@ -43,7 +42,7 @@ public class AudioActivity extends BaseActivity {
         initViews();
         mExpandableListView = (ListView) findViewById(R.id.expandableListView);
         
-        mExpandableListViewAdapter = new ExpandableListViewAdapter(this,mCommonApplication.getNetInfoList());
+        mExpandableListViewAdapter = new MultiMediaListAdapter(this,mCommonApplication.getNetInfoList());
         mExpandableListView.setAdapter(mExpandableListViewAdapter);
         ButtonClickListener listener = new ButtonClickListener();
         playBtn.setOnClickListener(listener);
@@ -62,7 +61,10 @@ public class AudioActivity extends BaseActivity {
                 String resname = mCommonApplication.getNetInfoList().get(arg2).getResname();
                 musicUrl ="http://"+ headUrl+respath+resname+".mp3" ;
                 paynum = 0 ;
+                mExpandableListViewAdapter .setSelectItem(arg2);
+                mExpandableListViewAdapter.notifyDataSetInvalidated(); // 通知adapter刷新数据
                 handler.sendEmptyMessage(PAUSE);
+                
                 
             }
         });
@@ -94,7 +96,9 @@ public class AudioActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mExpandableListViewAdapter.player.stop();      	
+        if(player!=null){
+        player.stop();
+        }
     }
     
     private void initViews() {
@@ -155,7 +159,7 @@ public class AudioActivity extends BaseActivity {
                 
                 if(paynum%2==0){
                     handler.sendEmptyMessage(PAUSE);
-                 
+                  
                    }else{
                    
                        handler.sendEmptyMessage(PLAY);

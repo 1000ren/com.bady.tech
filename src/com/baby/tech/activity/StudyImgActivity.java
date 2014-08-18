@@ -1,4 +1,4 @@
-package com.baby.tech;
+package com.baby.tech.activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baby.tech.R;
 import com.baby.tech.activity.base.BaseActivity;
 import com.baby.tech.db.Constant;
 import com.baby.tech.entity.NetInfo;
@@ -55,10 +56,13 @@ public class StudyImgActivity extends BaseActivity{
         
        // http://tileni.transmap.com.cn/8/103/207.png
 //        String url = "http://tileni.transmap.com.cn/8/103/207.png";
-        String url = "http://www.lbs007.net:8087/onestudy/shizi_pic/10002.jpg";
+       String url = "http://"+Constant.SERVER_IPIMG
+                +netInfoList.get(0).getRespath()+netInfoList.get(0).getResname()+".jpg";
         Bitmap mBitmap = mBlock.getBitmap(url);
+        info_img.setText(netInfoList.get(0).getName());
+        mView.setBackgroundDrawable( new BitmapDrawable(mBitmap));
         
-        mView.setBackground( new BitmapDrawable(mBitmap));
+        mView.setBackgroundDrawable( new BitmapDrawable(mBitmap));
     
         
         
@@ -87,7 +91,7 @@ public class StudyImgActivity extends BaseActivity{
                         +netInfoList.get(studyimg_Index).getRespath()+netInfoList.get(studyimg_Index).getResname()+".jpg";
                 Bitmap mBitmap = mBlock.getBitmap(url);
                 info_img.setText(netInfoList.get(studyimg_Index).getName());
-                mView.setBackground( new BitmapDrawable(mBitmap));
+                mView.setBackgroundDrawable( new BitmapDrawable(mBitmap));
                 
                 }
                 else{
@@ -102,7 +106,7 @@ public class StudyImgActivity extends BaseActivity{
                             +netInfoList.get(studyimg_Index).getRespath()+netInfoList.get(studyimg_Index).getResname()+".jpg";
                     Bitmap mBitmap = mBlock.getBitmap(url);
                     info_img.setText(netInfoList.get(studyimg_Index).getName());
-                    mView.setBackground( new BitmapDrawable(mBitmap));
+                    mView.setBackgroundDrawable( new BitmapDrawable(mBitmap));
                 }
                     else{
                         Toast.makeText(context, "下一张没有了", Toast.LENGTH_LONG).show();
