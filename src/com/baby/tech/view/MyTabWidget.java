@@ -83,7 +83,7 @@ public class MyTabWidget extends LinearLayout {
 	 */
 	private void init(final Context context) {
 		this.setOrientation(LinearLayout.HORIZONTAL);
-		this.setBackgroundResource(R.drawable.index_bottom_bar);
+		this.setBackgroundResource(R.drawable.tabbar);
 
 		LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -186,6 +186,7 @@ public class MyTabWidget extends LinearLayout {
 				checkedTextView.setChecked(false);
 				checkedTextView.setTextColor(Color.rgb(19, 12, 14));
 				mViewList.get(i).setBackgroundColor(Color.rgb(250, 250, 250));
+//				mViewList.get(i).setBackgroundColor(R.drawable.tabbar);
 			}
 		}
 	}
